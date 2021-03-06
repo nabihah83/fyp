@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="warning">
+   <ion-buttons slot="start">
+   <ion-back-button>back</ion-back-button>
+   </ion-buttons>
+  <ion-title>Edit Post</ion-title>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+     <div class="ion-padding">
+
+   
+      <ion-label position="floating"><b>Name</b></ion-label>
+      <ion-input type="email" [(ngModel)]="post.nama" required></ion-input>
+     <ion-item>
+       <ion-label>Enquire Type</ion-label>
+       <ion-select value="General" okText="Okay" [(ngModel)]="post.enquiry" cancelText=
+        "Dismiss">
+            <ion-select-option value="General">General</ion-select-option>
+            <ion-select-option value="Quotation">Quotation</ion-select-option>
+            <ion-select-option value="Complaint">Complaint</ion-select-option>
+            <ion-select-option value="Others">Others</ion-select-option>
+        </ion-select>
+     </ion-item>
+    <ion-item>
+    <ion-label position="floating">Message</ion-label>
+    <ion-input [(ngModel)]="post.message"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="warning" (click)="updatePost(post)">
+     <ion-icon slot="start" name="send"></ion-icon>Update
+   </ion-button>
+ </div>
+</ion-content>

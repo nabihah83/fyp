@@ -1,0 +1,40 @@
+<ion-header>
+ <ion-toolbar color="warning">
+ <ion-title>CONTACT</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+ 
+ </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <br>
+  <center><img src="assets/ngantuk.PNG"></center>
+  <center><p><b>Please fill up enquiry and we will be in touch with you soon</b></p></center>
+
+  <br>
+  <br>
+  <ion-label position="floating"><b>Name</b></ion-label>
+ <ion-input type="email" [(ngModel)]="post.nama" required></ion-input>
+ 
+  <ion-label><b>Enquire Type</b></ion-label>
+  <ion-select value="General" okText="Okay" [(ngModel)]="post.enquiry" cancelText=
+  "Dismiss">
+  <ion-select-option value="General">General</ion-select-option>
+  <ion-select-option value="Quotation">Quotation</ion-select-option>
+  <ion-select-option value="Complaint">Complaint</ion-select-option>
+  <ion-select-option value="Others">Others</ion-select-option>
+  </ion-select>
+ 
+ 
+ <ion-label position="floating"><b>Message</b></ion-label>
+ <ion-input type="email" [(ngModel)]="post.message" required></ion-input>
+ 
+ <br>
+ <ion-button expand="block" color="warning" (click)="createPost(post)">
+ <ion-icon slot="start" name="send"></ion-icon>
+ SEND
+ </ion-button>
+ 
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+  
+  <ion-title>HOME</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding class="background">
+  <br>
+  
+
+  <center><h1><b> BOOK NOW!</b> </h1></center>
+<center><b><p>Please fill the details below</p></b></center>
+
+<ion-list>
+        <ion-item>
+          <ion-label position="floating"><b>Name</b></ion-label>
+          <ion-input [(ngModel)]="post.name"></ion-input>
+        </ion-item>
+         <ion-item>
+          <ion-label position="floating"><b>Person</b></ion-label>
+          <ion-input [(ngModel)]="post.person"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><b>Time</b></ion-label>
+          <ion-input [(ngModel)]="post.time"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime value="1990-02-19" placeholder="Select Date" [(ngModel)]="post.date"></ion-datetime>
+        </ion-item>
+        <br>
+        <br>
+
+
+        <center><b><p>Click button menu to see menu and make an order in the blank below</p></b></center>
+        <ion-button expand="block" fill="outline" shape="round" color="warning" [routerLink]="['/order']"><b>MENU</b></ion-button>
+        
+        <ion-item><ion-label position="floating"><b>Order / Quantity</b></ion-label>
+          <ion-input type="text" [(ngModel)]="post.order" required></ion-input>
+        </ion-item>
+        <br>
+
+        
+        
+      </ion-list>
+      <br>
+      <br>
+    
+       <ion-button expand="block" color="warning" (click)="createPost(post)">
+ <ion-icon slot="start" name="send"></ion-icon>
+ RESERVE
+ </ion-button>
+
+
+
+       
+
+</ion-content>

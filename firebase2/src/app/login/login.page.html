@@ -1,0 +1,39 @@
+<ion-header>
+ <ion-toolbar color="warning" class="ion-text-center">
+ 
+ 	<ion-buttons slot="start">
+ 		<ion-back-button>back</ion-back-button>
+ 	</ion-buttons>
+
+      <ion-title>Login</ion-title>
+ </ion-toolbar>
+ 
+ 
+</ion-header>
+
+<ion-content padding class="background"><br>
+     <center><img src="assets/ngantuk.PNG"></center>
+
+     
+     <center><h1><b>LOGIN</b></h1></center>
+     <br>
+     
+     
+	 <ion-item>
+     <ion-label position="floating">E-mail/ No.Telephone</ion-label>
+     <ion-input type="email" [(ngModel)]="post.email" required></ion-input >
+     </ion-item>
+     <br>
+     <ion-item>
+     <ion-label position="floating">Password</ion-label>
+     <ion-input type="password" [(ngModel)]="post.password" required></ion-input >
+     </ion-item>
+     <br>
+     
+    <ion-button class="ion-padding" color="warning" shape="round" expand="full"  (click)="createPost(post)"><b>LOGIN</b>
+    </ion-button>
+    
+
+     
+
+</ion-content>

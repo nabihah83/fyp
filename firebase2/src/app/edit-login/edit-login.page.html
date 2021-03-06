@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="warning">
+   <ion-buttons slot="start">
+   <ion-back-button>back</ion-back-button>
+   </ion-buttons>
+  <ion-title>Edit Post</ion-title>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+     <div class="ion-padding">
+   
+
+      <center><img src="assets/ngantuk.PNG"></center>
+
+     
+     <center><h1><b>LOGIN</b></h1></center>
+     <br>
+     
+     
+	 <ion-item>
+     <ion-label position="floating">E-mail</ion-label>
+     <ion-input type="email" [(ngModel)]="post.email" required></ion-input >
+     </ion-item>
+     <br>
+     
+     <br>
+     <ion-button expand="block" color="warning" (click)="updatePost(post)">
+     <ion-icon slot="start" name="send"></ion-icon>Update
+   </ion-button>
+ </div>
+</ion-content>
+

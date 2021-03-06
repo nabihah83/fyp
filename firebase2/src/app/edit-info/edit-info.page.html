@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="warning">
+   <ion-buttons slot="start">
+   <ion-back-button>back</ion-back-button>
+   </ion-buttons>
+  <ion-title>Edit Post</ion-title>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+     <div class="ion-padding">
+     
+ 
+          <ion-label position="floating"><b>Info Update</b></ion-label>
+          <ion-input [(ngModel)]="post.info"></ion-input>
+         
+    
+          <ion-button expand="block" color="warning" (click)="updatePost(post)">
+          <ion-icon slot="start" name="send"></ion-icon>Update</ion-button>
+ </div>
+</ion-content>
